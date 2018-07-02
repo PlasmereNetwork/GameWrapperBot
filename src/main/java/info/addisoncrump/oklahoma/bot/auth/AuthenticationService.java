@@ -76,6 +76,14 @@ public class AuthenticationService {
     }
 
     @EventListener
+    public void onHandshakeCancelled(final @NonNull HandshakeCancelledEvent event) {
+        event.getChannel().sendMessage(String.format(
+                "%s: The handshake timed out before it was verified.",
+                event.getUser().getAsMention()
+        )).complete();
+    }
+
+    @EventListener
     public void onVerificationAttempt(final @NonNull VerificationAttemptEvent event) {
         Pair<User, SimplifiedMCPlayer> result = handshakePendingMap.remove(event.getSubmittedToken());
         if (result != null && event.getUser().getId().equals(result.getKey().getId())) {

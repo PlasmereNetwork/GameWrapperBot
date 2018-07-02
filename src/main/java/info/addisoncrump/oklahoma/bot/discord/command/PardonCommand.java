@@ -2,7 +2,7 @@ package info.addisoncrump.oklahoma.bot.discord.command;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import info.addisoncrump.oklahoma.bot.minecraft.event.PardonOrderEvent;
+import info.addisoncrump.oklahoma.bot.discord.event.PardonOrderEvent;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEventPublisher;
@@ -12,8 +12,8 @@ import javax.annotation.PostConstruct;
 
 @Component
 public final class PardonCommand extends Command {
-    private String moderationChannelID;
     private final ApplicationEventPublisher publisher;
+    private String moderationChannelID;
 
     public PardonCommand(final @NonNull @Value("${oklahoma.bot.discord.moderation.chat}") String moderationChannelID,
                          final @NonNull ApplicationEventPublisher publisher) {

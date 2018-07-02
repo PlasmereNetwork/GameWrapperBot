@@ -18,12 +18,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.core.annotation.Order;
 
 import javax.annotation.PreDestroy;
 import javax.security.auth.login.LoginException;
 
-@Order(2)
 @ComponentScan
 @Configuration("discordConfiguration")
 public class DiscordConfiguration {

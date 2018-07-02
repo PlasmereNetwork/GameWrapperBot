@@ -25,6 +25,11 @@ lombok {
     sha256 = ""
 }
 
+javadoc {
+    include 'info/addisoncrump/oklahoma/bot/*'
+    options.addBooleanOption('html5', true)
+}
+
 sourceCompatibility = 1.8
 
 mainClassName = 'info.addisoncrump.oklahoma.bot.OklahomaBotApplication'

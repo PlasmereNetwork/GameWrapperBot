@@ -1,6 +1,5 @@
 package info.addisoncrump.oklahoma.bot.minecraft.streams.filter;
 
-import info.addisoncrump.oklahoma.bot.aspect.ExcludeFromLogging;
 import info.addisoncrump.oklahoma.bot.minecraft.entity.SimplifiedMCPlayer;
 import info.addisoncrump.oklahoma.bot.minecraft.event.*;
 import lombok.AccessLevel;
@@ -25,7 +24,6 @@ public class MinecraftConsoleOutputParserService {
         this.publisher = publisher;
     }
 
-    @ExcludeFromLogging
     @EventListener
     public void onCleanedConsoleOutput(MinecraftCleanedConsoleOutputEvent event) {
         if (playerChatPattern.matcher(event.getMessage()).matches()) {

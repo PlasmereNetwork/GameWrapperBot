@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
-import org.springframework.core.annotation.Order;
 
 import javax.annotation.PreDestroy;
 import java.io.BufferedReader;
@@ -25,7 +24,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-@Order(3)
 @ComponentScan
 @Configuration("minecraftConfiguration")
 public class MinecraftConfiguration {

@@ -3,7 +3,7 @@ package info.addisoncrump.oklahoma.bot.discord.command;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import info.addisoncrump.oklahoma.bot.auth.event.HandshakeStartedEvent;
-import info.addisoncrump.oklahoma.bot.discord.event.NoUserFoundWithNameEvent;
+import info.addisoncrump.oklahoma.bot.auth.event.NoUserFoundWithNameEvent;
 import info.addisoncrump.oklahoma.bot.minecraft.entity.SimplifiedMCPlayer;
 import info.addisoncrump.oklahoma.bot.minecraft.listener.MinecraftPlayerLinkService;
 import lombok.NonNull;

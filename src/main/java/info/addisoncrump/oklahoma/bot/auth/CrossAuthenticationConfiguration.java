@@ -18,7 +18,6 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 
 import javax.annotation.PreDestroy;
 import java.io.FileNotFoundException;
@@ -71,7 +70,6 @@ public class CrossAuthenticationConfiguration {
         return Executors.newSingleThreadScheduledExecutor();
     }
 
-    @Order(1)
     @Bean("authRegistry")
     public VerifiedUserRegistry verifiedUserRegistry(@NonNull @Qualifier("registryPath") Path registryPath,
                                                      @NonNull Gson gson,

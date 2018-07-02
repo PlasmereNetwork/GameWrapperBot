@@ -1,9 +1,9 @@
 package info.addisoncrump.oklahoma.bot.discord.listener;
 
 import info.addisoncrump.oklahoma.bot.auth.event.HandshakeInitializedEvent;
+import info.addisoncrump.oklahoma.bot.auth.event.NoUserFoundWithNameEvent;
 import info.addisoncrump.oklahoma.bot.auth.event.VerificationFailedEvent;
 import info.addisoncrump.oklahoma.bot.auth.event.VerificationSuccessEvent;
-import info.addisoncrump.oklahoma.bot.discord.event.NoUserFoundWithNameEvent;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.event.EventListener;

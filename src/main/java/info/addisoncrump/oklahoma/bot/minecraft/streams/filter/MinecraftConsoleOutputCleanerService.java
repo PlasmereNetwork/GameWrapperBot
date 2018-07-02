@@ -1,6 +1,5 @@
 package info.addisoncrump.oklahoma.bot.minecraft.streams.filter;
 
-import info.addisoncrump.oklahoma.bot.aspect.ExcludeFromLogging;
 import info.addisoncrump.oklahoma.bot.minecraft.event.MinecraftCleanedConsoleOutputEvent;
 import info.addisoncrump.oklahoma.bot.minecraft.event.MinecraftConsoleOutputEvent;
 import org.slf4j.event.Level;
@@ -18,7 +17,6 @@ public class MinecraftConsoleOutputCleanerService {
 
     // This method assumes standard formatting for Minecraft output. If that isn't the case, raise an issue and I
     // might consider actually fixing this.
-    @ExcludeFromLogging
     @EventListener
     public void onConsoleOutput(MinecraftConsoleOutputEvent event) {
         Level level = Level.INFO;

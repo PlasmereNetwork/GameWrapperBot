@@ -1,8 +1,8 @@
 package info.addisoncrump.oklahoma.bot.minecraft.listener;
 
-import info.addisoncrump.oklahoma.bot.minecraft.event.BanOrderEvent;
-import info.addisoncrump.oklahoma.bot.minecraft.event.KickOrderEvent;
-import info.addisoncrump.oklahoma.bot.minecraft.event.PardonOrderEvent;
+import info.addisoncrump.oklahoma.bot.discord.event.BanOrderEvent;
+import info.addisoncrump.oklahoma.bot.discord.event.KickOrderEvent;
+import info.addisoncrump.oklahoma.bot.discord.event.PardonOrderEvent;
 import info.addisoncrump.oklahoma.bot.minecraft.streams.MinecraftProcessInputWriter;
 import lombok.NonNull;
 import org.springframework.context.event.EventListener;
@@ -38,7 +38,7 @@ public class MinecraftModerationEventListener {
 
     @EventListener
     public void onBanOrdered(PardonOrderEvent event) throws
-                                                  IOException {
+                                                     IOException {
         writer.println(String.format(
                 "/pardon %s",
                 event.getArgs()
