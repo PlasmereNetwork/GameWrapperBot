@@ -13,6 +13,8 @@ plugins {
     id 'application'
 }
 
+import io.franzbecker.gradle.lombok.task.DelombokTask
+
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
@@ -25,7 +27,22 @@ lombok {
     sha256 = ""
 }
 
+task delombok(type: DelombokTask, dependsOn: compileJava) {
+    ext.outputDir = file("$buildDir/delombok")
+    outputs.dir(outputDir)
+    sourceSets.main.java.srcDirs.each {
+        inputs.dir(it)
+        args(it, "-d", outputDir)
+    }
+}
+
+// Javadoc Task
 javadoc {
+    dependsOn delombok
+    source = delombok.outputDir
+    failOnError = false
+
+    options.memberLevel = JavadocMemberLevel.PRIVATE
     options.addBooleanOption('html5', true)
 }
 
