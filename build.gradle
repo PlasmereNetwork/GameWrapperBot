@@ -26,7 +26,6 @@ lombok {
 }
 
 javadoc {
-    include 'info/addisoncrump/oklahoma/bot/*'
     options.addBooleanOption('html5', true)
 }
 
