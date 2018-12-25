@@ -2,7 +2,7 @@ package info.addisoncrump.oklahoma.bot.auth.collect;
 
 import info.addisoncrump.oklahoma.bot.auth.entity.AuthenticationToken;
 import info.addisoncrump.oklahoma.bot.minecraft.entity.SimplifiedMCPlayer;
-import javafx.util.Pair;
+import info.addisoncrump.oklahoma.bot.misc.Pair;
 import net.dv8tion.jda.core.entities.User;
 
 import java.util.TreeMap;

@@ -6,7 +6,7 @@ import info.addisoncrump.oklahoma.bot.auth.entity.DiscordMCLink;
 import info.addisoncrump.oklahoma.bot.auth.event.*;
 import info.addisoncrump.oklahoma.bot.discord.entity.SimplifiedDiscordUser;
 import info.addisoncrump.oklahoma.bot.minecraft.entity.SimplifiedMCPlayer;
-import javafx.util.Pair;
+import info.addisoncrump.oklahoma.bot.misc.Pair;
 import lombok.NonNull;
 import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.entities.User;

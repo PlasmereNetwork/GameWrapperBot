@@ -47,6 +47,7 @@ javadoc {
 }
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 mainClassName = 'info.addisoncrump.oklahoma.bot.OklahomaBotApplication'
 
