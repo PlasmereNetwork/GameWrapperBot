@@ -9,11 +9,7 @@ build:
 		-w /home/gradle/project \
 		gradle:4.8.1-jdk8-slim \
 		gradle --no-daemon clean build assemble
-	docker build -t $(REPO)/$(NAME):$(VERSION) .
+	docker build -t $(REPO)/$(NAME):latest .
 
 clean:
 	rm -rf build/ out/
-
-tag-latest:
-	docker tag $(REPO)/$(NAME):$(VERSION) $(REPO)/$(NAME):latest
-	docker push $(REPO)/$(NAME):latest
